@@ -1,14 +1,16 @@
 send_report:
   name: Отправить отчёт
   description: Сводка по активным выключателям и датчикам.
-
-test_notify:
-  name: Тестовое уведомление
-  description: Отправляет тестовое уведомление во все настроенные каналы и озвучку TTS.
   fields:
-    title:
-      name: Заголовок
-      example: "Devices Monitor Test"
-    message:
-      name: Сообщение
-      example: "Это тестовое уведомление."
+    target:
+      name: Цель
+      description: "switches | sensors | both"
+      example: "both"
+
+test_switches_notify:
+  name: Тест уведомлений выключателей
+  description: Отправляет тестовое уведомление в канал выключателей.
+
+test_sensors_notify:
+  name: Тест уведомлений сенсоров
+  description: Отправляет тестовое уведомление в каналы сенсоров и озвучку TTS.

@@ -1,3 +1,3 @@
-# Devices Monitor v1.0.2
+# Devices Monitor v1.0.3
 
-Full config flow, working logic (switches + sensors), HACS-ready.
+Интеграция Home Assistant для мониторинга выключателей и датчиков с раздельными уведомлениями и отчётами.
