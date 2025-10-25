@@ -1,0 +1,18 @@
+action:
+- data:
+    target: sensors
+  service: devices_monitor.send_report
+blueprint:
+  description: Отправляет отчёт по сенсорам
+  domain: automation
+  input:
+    trigger_time:
+      default: 08:00:00
+      name: Время отчёта
+      selector:
+        time: {}
+  name: Devices Monitor – Ежедневный отчёт сенсоров
+mode: single
+trigger:
+- at: '!input trigger_time'
+  platform: time

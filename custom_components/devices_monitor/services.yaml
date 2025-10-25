@@ -1,6 +1,5 @@
 send_report:
   name: Отправить отчёт
-  description: Сводка по активным выключателям и датчикам.
   fields:
     target:
       name: Цель
@@ -9,8 +8,6 @@ send_report:
 
 test_switches_notify:
   name: Тест уведомлений выключателей
-  description: Отправляет тестовое уведомление в канал выключателей.
 
 test_sensors_notify:
   name: Тест уведомлений сенсоров
-  description: Отправляет тестовое уведомление в каналы сенсоров и озвучку TTS.

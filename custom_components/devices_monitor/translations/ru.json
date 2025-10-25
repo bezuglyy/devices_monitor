@@ -1,17 +1,11 @@
 {
   "config": {
     "step": {
-      "user": {
-        "title": "Мониторинг устройств",
-        "description": "Выберите режим, интервал и расписания."
-      }
+      "user": {"title": "Мониторинг устройств"}
     },
     "options": {
       "step": {
-        "init": {
-          "title": "Параметры Devices Monitor",
-          "description": "Настройте выключатели, датчики и сервисы уведомлений."
-        }
+        "init": {"title": "Параметры Devices Monitor"}
       }
     }
   }

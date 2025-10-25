@@ -33,7 +33,6 @@ class OptionsFlow(config_entries.OptionsFlow):
         self.entry = entry
     async def async_step_init(self, user_input=None):
         if user_input is not None:
-            # Преобразуем многострочные списки в массивы
             user_input[CONF_SENSORS_NOTIFY_ALERTS] = _as_list(user_input.get(CONF_SENSORS_NOTIFY_ALERTS, "notify.dom"))
             user_input[CONF_SENSORS_NOTIFY_TTS] = _as_list(user_input.get(CONF_SENSORS_NOTIFY_TTS, ""))
             return self.async_create_entry(title="", data=user_input)
@@ -43,12 +42,11 @@ class OptionsFlow(config_entries.OptionsFlow):
         def _get(k, d=None): return opts.get(k, data.get(k, d))
 
         schema = {
-            # switches
             vol.Optional(CONF_SWITCHES_LIST, default=_get(CONF_SWITCHES_LIST, [])): EntitySelector(EntitySelectorConfig(domain=["switch","light"], multiple=True)),
             vol.Optional(CONF_SWITCHES_NOTIFY_ON, default=_get(CONF_SWITCHES_NOTIFY_ON, "notify.dom")): TextSelector(),
             vol.Optional(CONF_SWITCHES_NOTIFY_OFF, default=_get(CONF_SWITCHES_NOTIFY_OFF, "notify.dom")): TextSelector(),
             vol.Optional(CONF_SWITCHES_NOTIFY_REPORT, default=_get(CONF_SWITCHES_NOTIFY_REPORT, "notify.dom")): TextSelector(),
-            # sensors
+
             vol.Optional(CONF_SENSORS_BINARY, default=_get(CONF_SENSORS_BINARY, [])): EntitySelector(EntitySelectorConfig(domain=["binary_sensor"], multiple=True)),
             vol.Optional(CONF_SENSORS_THRESHOLDS, default=_get(CONF_SENSORS_THRESHOLDS, {})): TextSelector({"multiline": True}),
             vol.Optional(CONF_SENSORS_NOTIFY_ON, default=_get(CONF_SENSORS_NOTIFY_ON, "notify.dom")): TextSelector(),
