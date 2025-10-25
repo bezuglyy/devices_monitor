@@ -1,0 +1,9 @@
+{
+  "name": "Devices Monitor",
+  "content_in_root": false,
+  "domain": "devices_monitor",
+  "country": [
+    "RU"
+  ],
+  "render_readme": true
+}
