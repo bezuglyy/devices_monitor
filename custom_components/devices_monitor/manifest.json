@@ -1,7 +1,7 @@
 {
   "domain": "devices_monitor",
   "name": "Мониторинг устройств",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "documentation": "https://github.com/bezuglyy/devices_monitor",
   "requirements": [],
   "codeowners": [
